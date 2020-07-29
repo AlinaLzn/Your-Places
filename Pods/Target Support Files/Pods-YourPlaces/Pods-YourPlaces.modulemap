@@ -1,0 +1,6 @@
+framework module Pods_YourPlaces {
+  umbrella header "Pods-YourPlaces-umbrella.h"
+
+  export *
+  module * { export * }
+}
