@@ -27,9 +27,7 @@ class Place: Object {
         self.imageData = imageData
         self.rating = rating
     }
-    
-//     let restaurantNames = ["Никола Пиросмани", "Sufra", "Mai Tai", "Diesel room", "Lombardia Pizzeria", "Хороший год", "GASTROPORT", "La bottega", "The Place 8110", "The Butcher`s Daughter", "Speak Easy"]
-    
+
 //     func savePlaces() {
 //        for place in restaurantNames {
 //            let image = UIImage(named: place)
