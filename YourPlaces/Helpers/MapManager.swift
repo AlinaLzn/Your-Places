@@ -51,7 +51,7 @@ class MapManager {
             closure()
         } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.showAlert(title: "Location Services are Disabled",
+                self.showAlert(title: "Location Services are Disabled!",
                                message: "To enable it go: Settings -> Privacy -> Location Services and turn On")
             }
         }
@@ -69,7 +69,7 @@ class MapManager {
         case .denied:
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.showAlert(
-                    title: "Your Location is not Available",
+                    title: "Your Location is not Available!",
                     message: "To enable your location tracking: Setting -> MyPlaces -> Location"
                 )
             }
@@ -99,7 +99,7 @@ class MapManager {
     // Строим маршрут от местоположения пользователя до заведения
      func getDirections(for mapView: MKMapView, previousLocation: (CLLocation) -> ()) {
         guard let location = locationManager.location?.coordinate else {
-            showAlert(title: "Error", message: "Current location is not found")
+            showAlert(title: "Error", message: "Current location is not found!")
             return
         }
         
@@ -107,7 +107,7 @@ class MapManager {
         previousLocation(CLLocation(latitude: location.latitude, longitude: location.longitude))
         
         guard let request = createDirectionsRequest(from: location) else {
-            showAlert(title: "Error", message: "Detination is not found")
+            showAlert(title: "Error", message: "Detination is not found!")
             return
         }
         
@@ -121,7 +121,7 @@ class MapManager {
             }
             
             guard let response = response else {
-                self.showAlert(title: "Error", message: "Directions is not available")
+                self.showAlert(title: "Error", message: "Directions is not available!")
                 return
             }
             for route in response.routes {
